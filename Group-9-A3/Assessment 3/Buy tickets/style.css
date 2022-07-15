@@ -1,0 +1,138 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: #F0F8FF;
+  user-select：none
+}
+
+#images{
+	display: none;
+}
+#myCanvas{
+	position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+.Canvas{
+	width:742px;
+	height: 530px;
+	margin-top: 20px;
+}
+
+header{
+	height: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+#screenArea{
+	width: 300px;
+	height: 25px;
+	background-color:#EDEDED ;
+	margin: 0 auto;
+	position: relative;
+	border-radius: 0 0 30px 30px;
+	position: relative;
+}
+#screenArea span{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: 500;
+	color:#8B8989;
+}
+
+#screenLine{
+	width: 100px;
+	height: 20px;
+	background-color: #B7B7B7;
+	position: relative;
+	margin-bottom: 20px;
+	border-radius: 6px;
+}
+
+#screenLine span{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 12px;
+	color:#EBEBEB;
+}
+
+#hint{
+	margin-left: 20px;
+	/* display: flex;
+	justify-content:flex-start; */
+}
+
+.hint{
+	width: 120px;
+	height: 50px;
+	background-color:#FFFFFF;
+	text-align: center;
+	font-size: 20px;
+	position: relative;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	float: left;
+	border: solid 2px #BDBDBD ;
+}
+.hint:before{
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #F0F8FF;
+	top: 50%;
+	left: 0%;
+	transform: translate(-50%, -50%);
+	border-radius:50% 50% ;
+	border:solid 2px #BDBDBD ;
+}
+#hint #price{
+	color:#EE4000;
+	font-size: 16px;
+}
+/* .hint:after{
+	content: "X";
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 50%;
+	right: 0%;
+	transform: translate(0,-50%);
+} */
+
+
+#submit{
+	/* float: right; */
+	position: absolute;
+	margin-top: 50px;
+	width: 250px;
+	height: 50px;
+	background-color: #FFB90F;
+	bottom: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding-top: 15px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	box-shadow: aliceblue;
+	user-select：none
+}
+#submit p{
+	font-size: 20px;
+	font-weight:600;
+	color: #FFFFF0;
+	user-select：none
+}

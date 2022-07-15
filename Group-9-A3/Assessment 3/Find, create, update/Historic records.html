@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>History Reservation</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bootbox.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="title">Historical concert booking records</div>
+        <div class="content">
+
+            <div class="container content_width">
+                <div class="person_search">
+                    <div class="search_input">
+                        <div class="input-group mb-3">
+                            <span>Name：</span>
+                            <input id="Ktext" type="text" class="form-control" placeholder="Please enter your name">
+                        </div>
+                    </div>
+                    <div class="search_input">
+                        <div class="input-group mb-3" hidden>
+                            <span>Commodity order：</span>
+                            <input id="job_num" type="text" class="form-control" placeholder="Please enter Commodity order">
+                        </div>
+                    </div>
+                    <div class="search_input">
+                        <button class="btn btn-primary search_btn" type="button" id="search_btn">Inquire</button>
+                        <button class="btn btn-primary search_btn" type="button" id="back_btn">Reset</button>
+                    </div>
+                </div>
+                <div class="line"></div>
+            </div>
+
+            <div class="export">
+                <button id="new_add" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#renyuan">
+                    <img src="img/add_two.png" />
+                    <span>Add</span>
+                </button>
+                <div class="modal fade" id="renyuan">
+                    <div class="modal-dialog modal-lg modal_position">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Add</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <table id="xztb" class="table">
+
+                                    <tbody>
+                                        <tr>
+                                            <td class="tb_bg">
+                                                <label for=""><font style="font-size: 14px; color: red;">*</font>Name</label>
+                                            </td>
+                                            <td><input class="userName" type="text" placeholder="Please enter your name" /></td>
+                                            <td class="tb_bg">
+                                                <label for=""><font style="font-size: 14px; color: red;">*</font>Commodity order</label>
+                                            </td>
+                                            <td><input class="jobNum" type="number" placeholder="Please enter Commodity order" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_bg">
+                                                <label for=""><font style="font-size: 14px; color: red;">*</font>Phone number</label>
+                                            </td>
+                                            <td><input class="phoneNum" type="number" placeholder="Please enter mobile number" /></td>
+                                            <td class="tb_bg"><label for="">Concert address</label></td>
+                                            <td><input type="text" placeholder="Please enter concert address" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_bg"><label for="">Ticket grade</label></td>
+                                            <td>
+                                                <select class="form-control select_down" style="font-size: 13px; color: #666;">
+                                                    <option>primary</option>
+                                                    <option>intermediate</option>
+                                                    <option>senior</option>
+                                                </select>
+                                            </td>
+                                            <td class="tb_bg"><label for="">commodity</label></td>
+                                            <td>
+                                                <select class="form-control select_down" style="font-size: 13px; color: #666;">
+                                                    <option>Same style of stars</option>
+                                                    <option>Food</option>
+                                                    <option>light stick</option>
+                                                    <option>Help card</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button id="add_btn" type="button" class="btn btn-secondary">Define</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <table id="tb" class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Order ID</th>
+                        <th>Phone Number</th>
+                        <th>vocal concert</th>
+                        <th>Ticket grade</th>
+                        <th>Commodity</th>
+                        <th>Operation</th>
+                    </tr>
+                </thead>
+                <tbody id="show_tbody">
+                    <tr>
+                        <td>Tim</td>
+                        <td>7652101882828</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>------</td>
+                        <td>second-class seat</td>
+                        <td>cola</td>
+                        <td>
+                            <a href="#" class="edit">Compile</a>
+                            <a href="#" class="del">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tom</td>
+                        <td>7428107890909</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>------</td>
+                        <td>Business seat</td>
+                        <td>Fried chicken and beer</td>
+                        <td>
+                            <a href="#" class="edit">Compile</a>
+                            <a href="#" class="del">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/mejs.js"></script>
+</body>
+</html>

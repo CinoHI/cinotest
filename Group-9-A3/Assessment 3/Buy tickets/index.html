@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy tickets</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function show2(){
+            var show_part = document.querySelector('.part');
+            show_part.style.display = 'block';
+        }
+        function hide(){
+            var show_part = document.querySelector('.part');
+            show_part.style.display = 'none';
+        }
+    </script>
+    <style>
+        .part{
+            display: none;
+            background-color: aliceblue;
+            height:300px;
+            width:210px;
+            position: top;
+            margin: 12%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="images"> <img src="img/selected.png"> <img src="img/unselected1.png"> <img src="img/bought.png"> </div>
+    <header>
+        <div id="screenArea"> <span>Projection Hall</span> </div>
+        <div id="screenLine"> <span>Screen</span> </div>
+    </header>
+    <div class="Canvas">
+        <canvas id="myCanvas"> This is a canvas </canvas>
+    </div>
+    <div id="hint"> </div>
+    <div id="submit">
+        <button onclick="show2()">Confirm seat</button>
+        <style type="text/css">
+            button{
+              color: red;
+              background: rgba(0, 0, 0, 0);
+              border-color: transparent;
+              font-size: larger;
+            }
+          </style>
+        <div class="part">
+            <form action="1.html" method="post">
+                name  : <input type="text" id="names" value="xxx" size="18px"><br>
+                age   : <input type="text" id="ages" value="xx" size="18px"><br>
+                nation: <input type="text" id="nations" value="xxx" size="18px"><br>
+                Order No: <input type="text" id="Order No" value="xxxxxxxxxxxxx" size="18px"><br>
+                nativess : <input type="text" id="nativess" value="xxx" size="18px"><br>
+                ID :<input type="text" id="identitys" value="xxxxxxxxxxxxx" size="18px"><br>
+                address:<input type="text" id="addresses" value="xxxxxxxxxxxxx" size="18px"><br>
+                phones:<input type="text" id="phones" value="xxxxxxxxxxxxx" size="18px"><br>
+            </form>
+        </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
